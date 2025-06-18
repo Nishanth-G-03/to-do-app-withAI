@@ -1,59 +1,81 @@
 # 📝 Fullstack To-Do App created with AI
 
-A dynamic and stylish To-Do List Web App built using **HTML**, **CSS**, and **JavaScript**. This app is part of a daily learning sprint where each day focuses on one key feature to improve fullstack development and UI/UX skills.
+A sleek, responsive ToDo List app with modern UI, dark mode, priority tagging, filtering, animations, and AI-driven enhancements.
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Features
 
-🌐 [View Deployed App](https://github.com/Nishanth-G-03/to-do-app-withAI.git)
+### ✅ Core Functionalities
+- Add, edit, and delete tasks
+- Mark tasks as completed or pending
+- Set **due dates** for tasks
+- Assign **priority** levels: High, Medium, Low
 
----
+### 🎯 Filtering & Sorting
+- Filter by **status**: All, Completed, Pending
+- Sort tasks by:
+  - 🔼 Deadline (Earliest to Latest)
+  - 🔽 Deadline (Latest to Earliest)
+  - 🔼 Priority (High → Low)
+  - 🔽 Priority (Low → High)
 
-## ⚙️ Features Implemented
+### 🔍 Search
+- Live search bar to filter tasks by keywords
 
-### ✅ Core Features
-- 🖊️ Add new tasks
-- 🗑️ Delete tasks
-- ✅ Mark tasks as completed
-- 📌 Priority tagging (`Low`, `Medium`, `High`)
-- 🧠 Smart localStorage support (data persists on refresh)
-- 🆑 Clear All / Clear Completed options
+### 🌗 Theme
+- Toggle between **light** and **dark** mode
+- Includes smooth animated transitions
 
----
+### 💾 Persistence
+- Tasks stored in **localStorage**
+- Clear all saved data with a single click
 
-### 🎯 Task Enhancements
-- 📆 Due Date support with calendar picker
-- 🔍 Filter tasks by:
-  - All
-  - Completed
-  - Pending
-- 🌓 Theme Toggle:
-  - Dark / Light Mode switch
-  - Saves preference using `localStorage`
-- 🧼 Password visibility toggle (if applicable to a login form or future integration)
-- 🧹 Clear saved data button
-- 🧷 Task priority color coding
+### 💡 UI & UX Enhancements
+- Task items styled as **cards**
+- Icons for edit ✏️, delete 🗑️, complete ✅ (via Font Awesome)
+- Smooth hover effects and modern design
+- **Dynamic footer** with current year and developer credit
 
----
-
-### 🧩 UI & UX
-- 🎨 Clean and responsive UI
-- 🌀 Subtle animations and transitions
-- 💡 Dynamic footer showing current year
-
----
-
-## 📌 Tech Stack
-
-| Frontend | Local Storage | Deployment |
-|----------|----------------|------------|
-| HTML5    | `window.localStorage` | GitHub Pages |
-| CSS3     |                |            |
-| JavaScript |              |            |
+### 📱 Responsive Design
+- Fully mobile-friendly using Flexbox and media queries
+- Optimized for small to large screens
 
 ---
 
+## 🛠️ Built With
+
+- HTML5, CSS3, JavaScript (Vanilla)
+- Font Awesome for icons
+- LocalStorage for offline persistence
+
+---
+
+## 🧠 Ideas for Future Improvements
+
+- Drag & drop to reorder tasks
+- Notifications/reminders for due tasks
+- Backend integration (Node.js + MongoDB)
+
+---
+
+## 📸 Screenshots
+
+> _You can add screenshots here after pushing this readme._
+
+---
+
+## 👨‍💻 Developed By
+
+**Nishanth G**  
+©️ `2025-${new Date().getFullYear()}` — All rights reserved.
+
+---
+
+## 🌐 [Live Demo](https://github.com/Nishanth-G-03/to-do-app-withAI.git)
+
+---
+      
 ## 💡 How to Use
 
 1. Clone the repository  

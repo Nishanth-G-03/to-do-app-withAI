@@ -4,10 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>To-Do List</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="theme-toggle">
+      <input type="text" id="searchInput" placeholder="🔍 Search tasks..." />
   <button id="themeBtn">🌙 Toggle Theme</button>
 </div>
   <div class="todo-container">
@@ -27,6 +32,7 @@
         <button onclick="setFilter('completed')">Completed</button>
         <button onclick="setFilter('pending')">Pending</button>
     </div>
+
     <select id="sortOptions">
       <option value="">-- Sort By --</option>
       <option value="date-asc">Deadline ↑ (Earliest First)</option>
@@ -34,6 +40,7 @@
       <option value="priority-asc">Priority ↑ (High → Low)</option>
       <option value="priority-desc">Priority ↓ (Low → High)</option>
     </select>
+  
     <ul id="taskList"></ul>
     
     

@@ -13,7 +13,11 @@ function renderTasks() {
   taskList.innerHTML = "";
   let filteredTasks = tasks;  
 
-  if (currentFilter === 'completed') {
+  const searchValue = document.getElementById("searchInput").value.toLowerCase();
+  if (searchValue) {
+    filteredTasks = tasks.filter(task => task.text.toLowerCase().includes(searchValue));
+  }
+  else if (currentFilter === 'completed') {
     filteredTasks = tasks.filter(task => task.completed);
   } else if (currentFilter === 'pending') {
     filteredTasks = tasks.filter(task => !task.completed);
@@ -31,9 +35,9 @@ function renderTasks() {
         <small>📅 Due: ${task.dueDate || "Not set"}</small>
       </span>
       <div>
-        <button onclick="toggleComplete(${index})">✅</button>
-        <button onclick="editTask(${index})">✏️</button>
-        <button onclick="deleteTask(${index})">❌</button>
+        <button class="complete-btn" onclick="toggleComplete(${index})">${task.completed ? '<i class="fas fa-check-circle"></i>' : '<i class="far fa-circle"></i>'}</button>
+        <button class="edit-btn" onclick="editTask(${index})"><i class="fas fa-pen"></i></button>
+        <button class="delete-btn" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></button>
       </div>
     `;
 
@@ -52,9 +56,13 @@ function renderTasks() {
 //         <button onclick="deleteTask(${index})">❌</button>
 //       </div>
 //     `;
+    li.classList.add("task-card");
     taskList.appendChild(li);
   });
 }
+
+document.getElementById("searchInput").addEventListener("input", renderTasks);
+
 function editTask(index) {
   let taskText = prompt("Edit task:", tasks[index].text);
   if (taskText !== null && taskText.trim() !== "") {

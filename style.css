@@ -29,7 +29,7 @@ body {
 background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
   color: var(--text);
   display: flex;
-  height: 100vh;
+  height: 97vh;
   justify-content: center;
   padding: 60px;
   transition: all 0.3s ease;
@@ -104,10 +104,19 @@ button:hover {
 }
 
 select {
-  padding: 10px;
+  padding: 9px;
+  border: 1px solid var(--border);
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+
+#searchInput{
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
 
 .priority {
   font-weight: bold;
@@ -174,6 +183,54 @@ li button {
   font-size: 1rem;
 }
 
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.task-card span {
+  flex: 1;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.task-card button {
+  margin-left: 8px;
+}
+
+.edit-btn, .delete-btn, .complete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.edit-btn:hover {
+  color: #3498db;
+  background-color: transparent;
+  transform: translateY(-2px);
+}
+.delete-btn:hover {
+  color: #e74c3c;
+  background-color: transparent;
+  transform: translateY(-2px);
+}
+.complete-btn:hover {
+  color: #2ecc71;
+  background-color: transparent;
+  transform: translateY(-2px);
+}
+
+
 .edit-btn {
   background-color: transparent;
   border: none;
@@ -186,8 +243,7 @@ li button {
   }
 
 #footer { 
-    position: absolute; 
-    left: 0;
+    position:fixed;
     bottom: 0;
   width: 100%;
   margin-top: 40px;
@@ -222,4 +278,20 @@ li button {
     flex-direction: column;
   }
     
+}
+
+@media (max-width: 600px) {
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-card button {
+    margin-top: 8px;
+  }
+
+  .task-card span {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
