@@ -27,7 +27,16 @@
         <button onclick="setFilter('completed')">Completed</button>
         <button onclick="setFilter('pending')">Pending</button>
     </div>
+    <select id="sortOptions">
+      <option value="">-- Sort By --</option>
+      <option value="date-asc">Deadline ↑ (Earliest First)</option>
+      <option value="date-desc">Deadline ↓ (Last First)</option>
+      <option value="priority-asc">Priority ↑ (High → Low)</option>
+      <option value="priority-desc">Priority ↓ (Low → High)</option>
+    </select>
     <ul id="taskList"></ul>
+    
+    
   </div>
   <footer id="footer"></footer>
 

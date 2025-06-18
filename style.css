@@ -15,10 +15,9 @@
 }
 
 body.dark{
-    --bg: #181818;
-     --bg-start: #0f2027;
+  --bg-start: #0f2027;
   --bg-end: #203a43;
-  --card-bg: #262626;
+  --card-bg: #c0c0c05b;
   --text: #f5f5f5;
   --button-bg: #4f8cff;
   --button-hover: #3a6fc0;
@@ -55,7 +54,7 @@ background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
 .todo-container {
   background: var(--card-bg);
   color: var(--text);
-  height: 200px;
+  height: 180px;
   padding: 30px;
   border-radius: 10px;
   width: 100%;
@@ -182,6 +181,9 @@ li button {
   margin-left: 10px;
   cursor: pointer;
 }
+#sortOptions{
+    margin-top: 20px;
+  }
 
 #footer { 
     position: absolute; 
@@ -207,10 +209,13 @@ li button {
   }
 
   .todo-container {
-    padding: 20px;
+    padding: 10px;
     margin-top: 50px;
     min-width: 300px;
     height: 320px;
+  }
+  #sortOptions{
+    margin-top: 40px;
   }
 
   .todo-input {

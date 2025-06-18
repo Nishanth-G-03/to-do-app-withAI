@@ -100,7 +100,30 @@ taskInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") addTask();
 });
 
+document.getElementById("sortOptions").addEventListener("change", function () {
+  const selected = this.value;
+
+  if (selected === "date-asc") {
+    tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+  } 
+  else if (selected === "date-desc") {
+    tasks.sort((a, b) => new Date(b.dueDate) - new Date(a.dueDate));
+  } 
+  else if (selected === "priority-asc") {
+    const priorityOrder = { "High": 1, "Medium": 2, "Low": 3 };
+    tasks.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
+  } 
+  else if (selected === "priority-desc") {
+    const priorityOrder = { "High": 1, "Medium": 2, "Low": 3 };
+    tasks.sort((a, b) => priorityOrder[b.priority] - priorityOrder[a.priority]);
+  }
+
+  renderTasks();
+});
+
 renderTasks();
+
+
 
 const themeBtn = document.getElementById("themeBtn");
 
