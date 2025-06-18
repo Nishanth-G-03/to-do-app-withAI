@@ -175,6 +175,14 @@ li button {
   font-size: 1rem;
 }
 
+.edit-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 #footer { 
     position: absolute; 
     left: 0;

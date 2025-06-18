@@ -32,6 +32,7 @@ function renderTasks() {
       </span>
       <div>
         <button onclick="toggleComplete(${index})">✅</button>
+        <button onclick="editTask(${index})">✏️</button>
         <button onclick="deleteTask(${index})">❌</button>
       </div>
     `;
@@ -53,6 +54,14 @@ function renderTasks() {
 //     `;
     taskList.appendChild(li);
   });
+}
+function editTask(index) {
+  let taskText = prompt("Edit task:", tasks[index].text);
+  if (taskText !== null && taskText.trim() !== "") {
+    tasks[index].text = taskText.trim();
+    saveTasks();
+    renderTasks();
+  }
 }
 
 function addTask() {
