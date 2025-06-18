@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="theme-toggle">
+  <button id="themeBtn">🌙 Toggle Theme</button>
+</div>
+  <div class="todo-container">
+    <h2>📝 To-Do List</h2>
+    <div class="todo-input">
+      <input type="text" id="taskInput" placeholder="Enter a new task" />
+      <select id="prioritySelect">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+    </select>
+    <input type="date" id="dueDateInput" />
+      <button id="addTaskBtn">Add</button>
+    </div>
+    <div class="filter-buttons">
+        <button onclick="setFilter('all')">All</button>
+        <button onclick="setFilter('completed')">Completed</button>
+        <button onclick="setFilter('pending')">Pending</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+  <footer id="footer"></footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
